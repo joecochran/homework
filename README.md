@@ -30,7 +30,8 @@
 ### Recommended for Senior Front End Engineer
 You may choose to make two API calls to populate any or all parts of page. The data returned may not reflect the amounts in the business_overview.png image. Assume that the data from these calls is correct.
   - Programs (GET: https://api.myjson.com/bins/5bdb3)
-  - Pricing Options (GET: https://api.myjson.com/bins/17oy7)
+  // - Pricing Options (GET: https://api.myjson.com/bins/17oy7)
+  - Pricing Options (GET: https://api.myjson.com/bins/47axv)
 
 ### Recommended for Senior UI Developer
 You may choose to make the application repsonsive.
