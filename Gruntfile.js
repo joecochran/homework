@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
-	require('jit-grunt')(grunt);
-
-	grunt.initConfig({
+    require('jit-grunt')(grunt);
+    
+    grunt.initConfig({
 		less: {
 			development: {
 				options: {
@@ -14,6 +14,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+        concat: {
+            dist: {
+                src: ['src/js/main.js'],
+                dest: 'dist/js/main.js'
+            }
+        },
 		watch: {
 			styles: {
 				files: ['src/less/**/*.less'],
@@ -21,9 +27,13 @@ module.exports = function(grunt) {
 				options: {
 					nospawn: true
 				}
-			}
+			},
+            scripts: {
+                files: ['src/js/**/*.js'],
+                tasks: ['concat']
+            }
 		}
 	});
 
-	grunt.registerTask('default', ['less', 'watch']);
+	grunt.registerTask('default', ['less', 'concat', 'watch']);
 };

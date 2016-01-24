@@ -1,4 +1,5 @@
 # MINDBODY FEE Challenge
+My work on the MINDBODY Frontend Engineer Challenge from [https://github.com/MINDBODY-FEE/homework]
 
 ## Requirements
 - npm
