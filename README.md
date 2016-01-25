@@ -59,5 +59,9 @@ directory to `localhost:8000`
 Using BEM (Block Element Modifier) methodology to organize css into components.
 The `src/less/` directory contains all less for the project. `src/less/boilerplate` contains a sliced up version of the html5boilerplate css. `src/less/components` contains individual "blocks" in the BEM methodology.
 
-## TODO
+## Todo
 - [ ] html minification
+- [ ] better optimize css
+  - [ ] turn off less optimization
+  - [ ] run through autoprefixer
+  - [ ] grunt cssmin autoprefixed version
