@@ -1,0 +1,29 @@
+.Header {
+    background: #edf7f3;
+    .clearfix;
+    min-width: 255px;
+}
+
+.Header__logo {
+    padding: 5px;
+    float: left;
+    @media only screen and (min-width: 767px) {
+        padding: 15px;
+    }
+}
+.Header__hamburger {
+    float: right;
+    margin: 16px 16px 0 0;
+    font-size: 20px;
+    background: none;
+    border: 1px solid #cbe3d7;
+    border-radius: 3px;
+    color: #5d6663;
+    transition: background 300ms;
+    &:hover {
+        background: #cbe3d7;
+    }
+    @media only screen and (min-width: 767px) {
+        display: none;
+    }
+}

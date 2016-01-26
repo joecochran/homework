@@ -10780,5 +10780,8 @@ v.tmpl.tag.ko_with={open:"with($1) {",close:"} "})};a.vb.prototype=new a.O;var b
     }
 }));
 
-console.log('concat is working');
-alert('yay');
+$(document).ready(function(){
+    $('#navToggle').click(function(){
+        $('.Navigation__links').toggle();
+    });
+});

@@ -1,5 +1,5 @@
 # MINDBODY FEE Challenge
-My work on the MINDBODY Frontend Engineer Challenge from [https://github.com/MINDBODY-FEE/homework]
+My work on the MINDBODY Frontend Engineer Challenge from https://github.com/MINDBODY-FEE/homework
 
 ## Requirements
 - npm
@@ -72,3 +72,4 @@ The `src/less/` directory contains all less for the project. `src/less/boilerpla
   - [ ] turn off less optimization
   - [ ] run through autoprefixer
   - [ ] grunt cssmin autoprefixed version
+- [ ] set banner for uglify

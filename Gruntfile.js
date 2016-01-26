@@ -50,6 +50,20 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'src',
+                    src: '**/*.html',
+                    dest: 'dist/'
+                }]
+            }
+        },
 		watch: {
 			styles: {
 				files: ['src/less/**/*.less'],
@@ -76,13 +90,15 @@ module.exports = function(grunt) {
                 }
             },
             html: {
-                files: ['dist/**/*.html'],
+                files: ['src/**/*.html'],
+                tasks: ['htmlmin'],
                 options: {
+                    spawn: false,
                     livereload: true
                 }
             }
 		}
 	});
 
-	grunt.registerTask('default', ['less', 'concat', 'uglify', 'newer:imagemin', 'connect', 'watch']);
+	grunt.registerTask('default', ['less', 'concat', 'uglify', 'newer:imagemin', 'htmlmin', 'connect', 'watch']);
 };

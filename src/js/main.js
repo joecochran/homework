@@ -1,2 +1,5 @@
-console.log('concat is working');
-alert('yay');
+$(document).ready(function(){
+    $('#navToggle').click(function(){
+        $('.Navigation__links').toggle();
+    });
+});
