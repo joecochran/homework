@@ -423,6 +423,9 @@ textarea {
 html {
   box-sizing: border-box;
 }
+/*
+ * Makes the box model suck a little less
+ */
 *,
 *:before,
 *:after {
@@ -514,8 +517,8 @@ body {
   clear: both;
 }
 .header {
-  background: #edf7f3;
   min-width: 255px;
+  background: #edf7f3;
 }
 .header:before,
 .header:after {
@@ -539,12 +542,12 @@ body {
 .header__trigger {
   float: right;
   margin: 16px 16px 0 0;
-  font-size: 20px;
-  background: none;
+  transition: background 300ms;
   border: 1px solid #cbe3d7;
   border-radius: 3px;
+  background: none;
   color: #5d6663;
-  transition: background 300ms;
+  font-size: 20px;
 }
 .header__trigger:hover {
   background: #cbe3d7;
@@ -572,16 +575,16 @@ body {
 .navigation__list {
   margin: 0;
   padding: 0;
-  border-top: 1px solid #d4e2e6;
   display: none;
+  border-top: 1px solid #d4e2e6;
 }
 @media only screen and (min-width: 767px) {
   .navigation__list {
-    border-top: none;
     display: block !important;
     position: relative;
     bottom: -3px;
     transform: translateY(1px);
+    border-top: none;
   }
   .navigation__list:before,
   .navigation__list:after {
@@ -595,18 +598,18 @@ body {
   }
 }
 .navigation__item {
-  list-style: none;
   padding: 0;
   border-top: 1px solid #d4e2e6;
-  font-size: 14px;
   background: #fff;
+  font-size: 14px;
+  list-style: none;
 }
 .navigation__item a {
-  color: #709582;
-  text-decoration: none;
   display: block;
   padding: 15px;
   transition: background 300ms;
+  color: #709582;
+  text-decoration: none;
 }
 @media only screen and (min-width: 767px) {
   .navigation__item a {
@@ -638,14 +641,14 @@ body {
 }
 @media only screen and (min-width: 767px) {
   .navigation__item {
+    height: 40px;
+    float: left;
+    position: relative;
+    border-top: 1px solid #d4e2e6;
+    border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #cbcfd1;
     background: linear-gradient(to bottom, #fff, #eff2f1);
-    float: left;
-    border-top: 1px solid #d4e2e6;
     font-size: 13px;
-    border-right: 1px solid #e0e0e0;
-    height: 40px;
-    position: relative;
   }
   .navigation__item:last-of-type {
     border-right: none;
@@ -657,18 +660,18 @@ body {
   }
 }
 .navigation__item--active {
-  list-style: none;
   padding: 0;
   border-top: 1px solid #d4e2e6;
-  font-size: 14px;
   background: #fff;
+  font-size: 14px;
+  list-style: none;
 }
 .navigation__item--active a {
-  color: #709582;
-  text-decoration: none;
   display: block;
   padding: 15px;
   transition: background 300ms;
+  color: #709582;
+  text-decoration: none;
 }
 @media only screen and (min-width: 767px) {
   .navigation__item--active a {
@@ -700,14 +703,14 @@ body {
 }
 @media only screen and (min-width: 767px) {
   .navigation__item--active {
+    height: 40px;
+    float: left;
+    position: relative;
+    border-top: 1px solid #d4e2e6;
+    border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #cbcfd1;
     background: linear-gradient(to bottom, #fff, #eff2f1);
-    float: left;
-    border-top: 1px solid #d4e2e6;
     font-size: 13px;
-    border-right: 1px solid #e0e0e0;
-    height: 40px;
-    position: relative;
   }
   .navigation__item--active:last-of-type {
     border-right: none;
@@ -720,13 +723,13 @@ body {
 }
 @media only screen and (min-width: 767px) {
   .navigation__item--active {
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid #a7b3b6;
-    border-left: 1px solid #a7b3b6;
-    border-right: 1px solid #a7b3b6;
-    border-radius: 4px 4px 0 0;
     height: 43px;
     top: -3px;
+    border-top: 1px solid #a7b3b6;
+    border-right: 1px solid #a7b3b6;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #a7b3b6;
+    border-radius: 4px 4px 0 0;
     background: #fff;
   }
   .navigation__item--active:first-of-type {
@@ -749,10 +752,10 @@ body {
   }
 }
 .subnav {
+  clear: both;
   border-top: 1px solid #cbe3d7;
   border-bottom: 1px solid #d5d4cb;
   background: #fff;
-  clear: both;
 }
 .subnav:before,
 .subnav:after {
@@ -771,9 +774,9 @@ body {
 }
 .subnav__link {
   padding: 10px 5px;
-  list-style: none;
-  font-size: 12px;
   display: inline-block;
+  font-size: 12px;
+  list-style: none;
 }
 .subnav__link a {
   text-decoration: none;
@@ -789,22 +792,22 @@ body {
 }
 @media only screen and (min-width: 767px) {
   .subnav__link {
-    font-size: 14px;
     padding: 15px 16px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 980px) {
   .subnav__link {
-    font-size: 15px;
     padding: 15px 17px;
+    font-size: 15px;
   }
 }
 .subnav__link--active {
-  padding: 10px 5px;
-  list-style: none;
-  font-size: 12px;
-  display: inline-block;
   font-weight: bold;
+  padding: 10px 5px;
+  display: inline-block;
+  font-size: 12px;
+  list-style: none;
 }
 .subnav__link--active a {
   text-decoration: none;
@@ -820,37 +823,37 @@ body {
 }
 @media only screen and (min-width: 767px) {
   .subnav__link--active {
-    font-size: 14px;
     padding: 15px 16px;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 980px) {
   .subnav__link--active {
-    font-size: 15px;
     padding: 15px 17px;
+    font-size: 15px;
   }
 }
 .button {
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px #dfffc2;
-  background: linear-gradient(to bottom, #bcd89e, #9ac084);
-  border: 1px solid #91b57c;
   padding: .25em .5em;
+  border: 1px solid #91b57c;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #bcd89e, #9ac084);
+  box-shadow: inset 0 1px 1px #dfffc2;
 }
 .sidebar {
   float: left;
 }
 .sidebar__button {
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px #dfffc2;
-  background: linear-gradient(to bottom, #bcd89e, #9ac084);
-  border: 1px solid #91b57c;
-  padding: .25em .5em;
+  padding: 0 7px;
   color: #fff;
   font-size: 2em;
   line-height: 1;
-  padding: 0 7px;
   font-weight: bold;
+  padding: .25em .5em;
+  border: 1px solid #91b57c;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #bcd89e, #9ac084);
+  box-shadow: inset 0 1px 1px #dfffc2;
 }
 @media only screen and (min-width: 787px) {
   .sidebar__button {
@@ -861,14 +864,14 @@ body {
 }
 .sidebar__label {
   padding-left: 1em;
-  user-select: none;
   font-size: 14px;
+  user-select: none;
 }
 @media only screen and (min-width: 787px) {
   .sidebar__label {
     display: block;
-    padding-left: 0;
     padding-top: 5px;
+    padding-left: 0;
     font-size: 11px;
   }
 }
@@ -880,11 +883,11 @@ body {
 .program {
   margin: 0;
   margin-left: 2.5316456%;
-  border-radius: 4px;
-  border: 1px solid #c7c7b6;
-  background: #fff;
   width: 30.7594937%;
   float: left;
+  border: 1px solid #c7c7b6;
+  border-radius: 4px;
+  background: #fff;
 }
 .program__header {
   padding: 20px 20px 0;
@@ -901,19 +904,19 @@ body {
 }
 .program__heading {
   padding: 0;
+  float: left;
+  margin: 0;
   line-height: 1;
   font-size: 16px;
   color: #4d4d42;
-  float: left;
-  margin: 0;
 }
 .program__edit {
-  border: 1px solid #f2f2f0;
-  border-radius: 4px;
   width: 23px;
   height: 21px;
-  background: transparent;
   float: right;
+  border: 1px solid #f2f2f0;
+  border-radius: 4px;
+  background: transparent;
 }
 /* ==========================================================================
    Print styles.
