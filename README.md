@@ -77,7 +77,7 @@ When in doubt, I have referred to the [scss-lint sort order for smacss](https://
 ## Pagespeed
 Google's Pagespeed Insights are used to ensure a fast, snappy site. A screenshot of the most recent score along with explanations for any failed suggestions follows:
 
-[Pagespeed Score](http://joecochran.sdf.org/mindbodyfee/img/pagespeed-score.png)
+![Pagespeed Score](http://joecochran.sdf.org/mindbodyfee/img/pagespeed-score.png)
 
 ### Notes on failed suggestions
 1. **"Enable compression"** - This is a server setting, not related to the source and build of the site. The demo is hosted on a simple shell account's hosting, which comes with several limitations (but costs nothing!). In a production environment, I would modify the .htaccess (apache) or nginx.conf (nginx) to enable Gzip compression, thus passing this test.
