@@ -1,17 +1,20 @@
-.Header {
+.header {
     background: #edf7f3;
     .clearfix;
     min-width: 255px;
 }
 
-.Header__logo {
+.header__logo {
     padding: 5px;
     float: left;
     @media only screen and (min-width: 767px) {
-        padding: 8px 14px;
+        padding: 8px 14px 4px;
+    }
+    @media only screen and (min-width: 897px) {
+        padding: 8px 0 4px 14px; 
     }
 }
-.Header__hamburger {
+.header__trigger {
     float: right;
     margin: 16px 16px 0 0;
     font-size: 20px;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
     $('#navToggle').click(function(){
-        $('.Navigation__links').toggle();
+        $('.navigation__list').slideToggle('fast');
     });
 });

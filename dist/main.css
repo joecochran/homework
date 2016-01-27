@@ -507,7 +507,7 @@ textarea {
 }
 @media only screen and (min-width: 767px) {
   .Header__logo {
-    padding: 15px;
+    padding: 8px 14px;
   }
 }
 .Header__hamburger {
@@ -540,6 +540,7 @@ textarea {
 @media only screen and (min-width: 767px) {
   .Navigation__links {
     border-top: none;
+    display: block !important;
   }
   .Navigation__links:before,
   .Navigation__links:after {
