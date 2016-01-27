@@ -914,9 +914,29 @@ body {
   width: 23px;
   height: 21px;
   float: right;
+  margin: 0;
+  padding: 0;
   border: 1px solid #f2f2f0;
   border-radius: 4px;
   background: transparent;
+}
+.monthly {
+  padding: 0 20px;
+}
+.monthly__heading {
+  font-size: 10px;
+  color: #92927c;
+}
+.icon__edit {
+  height: 16px;
+  width: 16px;
+  display: block;
+  margin: 0;
+  background: url('../img/pencil_icons.png');
+  background-position: 0px 0px;
+}
+.icon__edit:hover {
+  background-position: 0px 17px;
 }
 /* ==========================================================================
    Print styles.
