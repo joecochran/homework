@@ -13,16 +13,33 @@ module.exports = function(grunt) {
         },
 		less: {
 			development: {
-				options: {
-					compress: true,
-					yuicompress: true,
-					optimization: 2
-				},
 				files: {
-					"dist/css/main.css": "src/less/main.less"
+					"src/css/main.css": "src/less/main.less"
 				}
 			}
 		},
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            },
+            main: {
+                expand: true,
+                flatten: true,
+                src: 'src/css/main.css',
+                dest: 'dist/'
+            }
+        },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/css/',
+                    src: 'main.css',
+                    dest: 'dist/css/',
+                    ext: '.min.css'
+                }]
+            }
+        },
         concat: {
             dist: {
                 src: [
@@ -67,7 +84,7 @@ module.exports = function(grunt) {
 		watch: {
 			styles: {
 				files: ['src/less/**/*.less'],
-				tasks: ['less'],
+				tasks: ['less', 'autoprefixer', 'cssmin'],
 				options: {
 					spawn: false,
                     livereload: true
@@ -100,5 +117,5 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['less', 'concat', 'uglify', 'newer:imagemin', 'htmlmin', 'connect', 'watch']);
+	grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'newer:imagemin', 'htmlmin', 'connect', 'watch']);
 };
