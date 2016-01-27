@@ -1,4 +1,4 @@
-.Subnav {
+.subnav {
     border-top: 1px solid #cbe3d7;
     border-bottom: 1px solid #d5d4cb;
     background: #fff;
@@ -6,14 +6,15 @@
     clear:both;
 }
 
-.Subnav__links {
-    margin: 0;
+.subnav__links {
+    margin: 0 auto;
     padding: 0;
+    max-width: 990px;
     // text-align: center;
 }
 
-.Subnav__link {
-    padding: 15px 15px;
+.subnav__link {
+    padding: 10px 5px;
     list-style: none;
     font-size: 12px;
     display: inline-block;
@@ -24,11 +25,19 @@
             text-decoration: underline;
         }
     }   
+    @media only screen and (min-width: 360px) {
+        padding: 10px 10px;
+    }
     @media only screen and (min-width: 767px) {
         font-size: 14px;
+        padding: 15px 16px;
+    }
+    @media only screen and (min-width: 980px) {
+        font-size: 15px;
+        padding: 15px 17px;
     }
 }
-.Subnav__link--active {
-    .Subnav__link;
+.subnav__link--active {
+    .subnav__link;
     font-weight: bold;
 }

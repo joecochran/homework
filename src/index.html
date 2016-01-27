@@ -29,14 +29,39 @@
                     <li class="navigation__item"><a href="#">Retail</a></li>
                 </ul>
             </nav>
-            <nav class="Subnav">
-                <ul class="Subnav__links">
-                    <li class="Subnav__link--active"><a href="#">Business Overview</a></li>
-                    <li class="Subnav__link"><a href="#">Schedule</a></li>
-                    <li class="Subnav__link"><a href="#">Reports</a></li>
+            <nav class="subnav">
+                <ul class="subnav__links">
+                    <li class="subnav__link"><a href="#">Dashboard</a></li>
+                    <li class="subnav__link--active"><a href="#">Business Overview</a></li>
+                    <li class="subnav__link"><a href="#">Schedule</a></li>
+                    <li class="subnav__link"><a href="#">Reports</a></li>
                 </ul>
             </nav>
         </header>
+        <main role="main" class="container">
+            <div class="sidebar">
+                <button class="sidebar__button" id="newProgram">+</button><label class="sidebar__label" for="newProgram">New Program</label>
+            </div>
+            <div class="programs">
+                <article class="program">
+                    <header class="program__header">
+                        <h3 class="program__heading">Yoga Classes</h3>
+                        <button class="program__edit"><i class="icon-edit"></i></button>
+                    </header>
+                    <section class="monthly">
+                        <h4 class="monthly__heading"></h4>
+                        <svg class="monthly__chart">Sales by Month</svg>
+                    </section>
+                    <section class=""></section>
+                </article>
+                <div class="program">
+                    <h3 class="program__heading">Yoga Classes</h3>
+                </div>
+                <div class="program">
+                    <h3 class="program__heading">Yoga Classes</h3>
+                </div>
+            </div>
+        </main>
         <script src="js/app.js"></script>
 
     </body>

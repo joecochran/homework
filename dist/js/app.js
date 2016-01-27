@@ -10782,6 +10782,9 @@ v.tmpl.tag.ko_with={open:"with($1) {",close:"} "})};a.vb.prototype=new a.O;var b
 
 $(document).ready(function(){
     $('#navToggle').click(function(){
-        $('.navigation__list').slideToggle('fast');
+        $('.navigation__list').slideToggle(300);
+    });
+    $('#newProgram').click(function(){
+        console.log('clicked');
     });
 });

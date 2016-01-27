@@ -34,6 +34,7 @@
   "dependencies": {
     "knockout": "^3.4.0",
     "knockout.mapping": "^2.4.3",
+    "lost": "^6.7.0",
     "normalize.css": "^3.0.3"
   }
 }

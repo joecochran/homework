@@ -66,10 +66,11 @@ directory to `localhost:8000`
 Using BEM (Block Element Modifier) methodology to organize css into components.
 The `src/less/` directory contains all less for the project. `src/less/boilerplate` contains a sliced up version of the html5boilerplate css. `src/less/components` contains individual "blocks" in the BEM methodology.
 
-## Todo
-- [ ] html minification
-- [ ] better optimize css
-  - [ ] turn off less optimization
-  - [ ] run through autoprefixer
-  - [ ] grunt cssmin autoprefixed version
-- [ ] set banner for uglify
+On top of BEM, properties have been organized to follow a convention, taken
+from SMACSS (https://smacss.com/book/formatting):
+1. **Box** - includes any property which affects the display and position of the
+box, like `display`, `float`, `position`, `top`, `height`, `width`, etc.
+2. Border
+3. Background
+4. Text
+5. Other
