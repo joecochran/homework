@@ -71,3 +71,5 @@ box, like `display`, `float`, `position`, `top`, `height`, `width`, etc.
 3. **Background** - includes `background` and related properties, like `background-image`, `background-size`, etc.
 4. **Text** - includes any property related to the display of text, like `font` (and its derivatives), `text-align`, `color`, `letter-spacing`, and `text-transform`. 
 5. **Other** - Any property which does not fit in the above categories goes at the end.
+
+When in doubt, I have referred to the [scss-lint sort order for smacss](https://github.com/brigade/scss-lint/blob/master/data/property-sort-orders/smacss.txt).
