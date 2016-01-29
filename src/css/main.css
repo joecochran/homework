@@ -1,10 +1,3 @@
-@charset "UTF-8";
-/* ===========================
-   Settings
-  =========================== */
-/*
- * Fonts
- */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -405,12 +398,6 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-/*
- * Allow only vertical resizing of textareas.
- */
-textarea {
-  resize: vertical;
-}
 body {
   background: #f4f4ee;
 }
@@ -750,6 +737,7 @@ body {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
+  outline: none;
 }
 .button--cancel {
   padding: .3em .5em .2em;
@@ -760,6 +748,7 @@ body {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
+  outline: none;
   background: linear-gradient(to bottom, #fb8888, #dd4d4f);
   border-color: #fb4f52;
   box-shadow: inset 0 1px #f99a9c;
@@ -785,6 +774,7 @@ body {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
+  outline: none;
 }
 @media only screen and (min-width: 787px) {
   .sidebar__button {
@@ -877,6 +867,7 @@ body {
   border: 1px solid #f2f2f0;
   border-radius: 4px;
   background: transparent;
+  outline: 0;
 }
 .program__footer {
   padding: 10px 20px 10px;
@@ -961,14 +952,14 @@ body {
   display: block;
   margin: 0;
   background: url('../img/pencil_icons.png');
-  background-position: 0px 0px;
+  background-position: 0 0;
 }
 .icon__edit:hover {
-  background-position: 0px 17px;
+  background-position: 0 17px;
 }
-/* ===========================
-   Modal
-  =========================== */
+.program__edit:hover .icon__edit {
+  background-position: 0 17px;
+}
 .modal {
   position: absolute;
   top: 0;
@@ -1127,7 +1118,7 @@ body {
   float: left;
   margin: 0;
   padding-right: 5px;
-  width: 36%;
+  width: 40%;
 }
 .banner__heading {
   margin: 0;
@@ -1149,7 +1140,7 @@ body {
   float: left;
   width: 33.3%;
   padding-right: 5px;
-  width: 32%;
+  width: 30%;
 }
 .banner__report {
   font-size: 12px;
@@ -1167,7 +1158,9 @@ body {
 .banner__chart--expanded {
   float: left;
   width: 33.3%;
-  width: 32%;
+  width: 30%;
+}
+.banner__chart--expanded .line-graph {
   transform: translateY(-5px);
 }
 .all-prog {
@@ -1175,11 +1168,12 @@ body {
   clear: both;
   margin-left: 2.5316456%;
   padding-top: 40px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .all-prog__column {
   max-width: 290px;
   padding: 5px 0;
+  color: #4d4d42;
 }
 .all-prog__column:before,
 .all-prog__column:after {
@@ -1194,12 +1188,14 @@ body {
 .all-prog__column--title {
   max-width: 290px;
   padding: 5px 0;
+  color: #4d4d42;
   width: 100%;
   max-width: 100%;
-  border-bottom: 1px solid #e1e1d8;
-  margin-bottom: 15px;
-  color: #92927c;
   position: relative;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e1e1d8;
+  color: #92927c;
+  font-weight: bold;
 }
 .all-prog__column--title:before,
 .all-prog__column--title:after {
@@ -1214,9 +1210,12 @@ body {
 .all-prog__name {
   display: inline-block;
   width: 109px;
+  font-weight: bold;
 }
 .all-prog__name--title {
   vertical-align: baseline;
+  color: #4d4d42;
+  font-weight: bold;
 }
 .all-prog__sales {
   display: inline-block;
@@ -1227,7 +1226,7 @@ body {
   display: inline-block;
   width: 87px;
   vertical-align: top;
-  font-size: 10px;
+  font-size: 9px;
   vertical-align: baseline;
 }
 .all-prog__attendance {
@@ -1239,8 +1238,17 @@ body {
   width: 89px;
   display: inline-block;
   vertical-align: top;
-  font-size: 10px;
+  font-size: 9px;
   vertical-align: baseline;
+}
+.all-prog__more {
+  font-weight: normal;
+  font-size: 9px;
+  text-decoration: none;
+  color: #92927c;
+}
+.all-prog__more:hover {
+  text-decoration: underline;
 }
 /* ==========================================================================
    Print styles.

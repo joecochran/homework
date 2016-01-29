@@ -1,17 +1,16 @@
 .icon__edit {
-    //box
     height: 16px;
     width: 16px;
     display: block;
     margin: 0;
-    //border
-    //background
     background: url('../img/pencil_icons.png');
-    background-position: 0px 0px;
-    //text
-    //other
-
+    background-position: 0 0;
     &:hover {
-        background-position: 0px 17px;
+        background-position: 0 17px;
     }
+}
+
+// a little hack for firefox
+.program__edit:hover .icon__edit {
+    background-position: 0 17px;
 }

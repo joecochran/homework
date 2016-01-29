@@ -66,45 +66,30 @@
     }
 }
 .new-program__input {
-    //box
     width: 100%;
     display: block;
     height: 34px;
     padding: 6px 12px;
-    //border
     border: 1px solid #ccc;
     border-radius: 4px;
-    //background
     background-color: #fff;
     background-image: none;
-    //text
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    //other
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     &:focus {
-        //box
-        //border
         border-color: #cbe3d7;
         outline: 0;
-        //background
-        //text
-        //other
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(203,227,215,.6);
     }
     &[multiple] {
         height: auto;
     }
     option {
-        //box
         padding: 2px;
-        //border
-        //background
-        //text
         line-height: 1.5;
-        //other
     }
     @media only screen and (min-width: 767px) {
         float: left;
