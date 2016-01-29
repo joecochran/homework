@@ -46,41 +46,6 @@
     font-size: 14px;
     list-style: none;
 
-    a {
-        //box
-        display: block;
-        padding: 15px;
-        transition: background 300ms;
-        //text
-        color: #709582;
-        text-decoration: none;
-
-        @media only screen and (min-width: 767px) {
-            //box
-            padding: 10px 15px;
-        }
-
-        @media only screen and (min-width: 980px) {
-            //box
-            padding: 10px 21px;
-
-        }
-        
-    }
-
-    &:hover a {
-        //background
-        background: #d4e2e6;
-
-            @media only screen and (min-width: 767px) {
-                //background
-                background: transparent;
-                //text
-                text-decoration: underline;
-            }
-
-    }
-
     &:first-of-type {
         //border
         border-top: none;
@@ -111,13 +76,44 @@
             border-right: none;    
         }
 
-        @media only screen and (min-width: 980px) {
-            //text
-            font-size: 14px;
-        }
+    }
+    @media only screen and (min-width: 980px) {
+        //text
+        font-size: 14px;
     }
 }
+.navigation__link {
+    //box
+    display: block;
+    padding: 15px;
+    transition: background 300ms;
+    //text
+    color: #709582;
+    text-decoration: none;
 
+    @media only screen and (min-width: 767px) {
+        //box
+        padding: 10px 15px;
+    }
+
+    @media only screen and (min-width: 980px) {
+        //box
+        padding: 10px 21px;
+
+    }
+    .navigation__item:hover & {
+        //background
+        background: #d4e2e6;
+
+        @media only screen and (min-width: 767px) {
+            //background
+            background: transparent;
+            //text
+            text-decoration: underline;
+        }
+    }
+
+}
 .navigation__item--active {
     //background
     background: #fff;

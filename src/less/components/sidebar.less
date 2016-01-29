@@ -1,10 +1,13 @@
 .sidebar {
     //box
-    float: left;
+    padding: 15px 0 0 17px;
     //border
     //background
     //text
     //other
+    @media only screen and (min-width: 767px) {
+        float: left;
+    }
 }
 .sidebar__button {
     //box
@@ -23,6 +26,10 @@
         //box
         width: 73px;
         height: 65px;
+        body:not(:-moz-handler-blocked) & {
+            padding: 0 0 0 2px;
+        }
+            padding: 0 0 4px 0;
         //border
         //background
         //text

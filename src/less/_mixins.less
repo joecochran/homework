@@ -1,0 +1,23 @@
+// media queries
+
+// helpers
+
+/*
+ * Clearfix: contain floats
+ */
+
+.clearfix {
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix:after {
+    clear: both;
+}
