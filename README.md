@@ -1,5 +1,5 @@
 # MINDBODY FEE Challenge
-My work on the [MINDBODY Frontend Engineer Challenge](https://github.com/MINDBODY-FEE/homework).
+My work on the [MINDBODY Frontend Engineer Challenge](https://github.com/MINDBODY-FEE/homework). Here's a [demo](http://joecochran.sdf.org/mindbodyfee/).
 
 ## Requirements
 - npm
@@ -71,3 +71,15 @@ box, like `display`, `float`, `position`, `top`, `height`, `width`, etc.
 3. **Background** - includes `background` and related properties, like `background-image`, `background-size`, etc.
 4. **Text** - includes any property related to the display of text, like `font` (and its derivatives), `text-align`, `color`, `letter-spacing`, and `text-transform`. 
 5. **Other** - Any property which does not fit in the above categories goes at the end.
+
+When in doubt, I have referred to the [scss-lint sort order for smacss](https://github.com/brigade/scss-lint/blob/master/data/property-sort-orders/smacss.txt). Less mixins have been placed at the end, unless they specifically fit into another category.
+
+## Pagespeed
+Google's Pagespeed Insights are used to ensure a fast, snappy site. A screenshot of the most recent score along with explanations for any failed suggestions follows:
+
+![Pagespeed Score](http://joecochran.sdf.org/mindbodyfee/img/pagespeed-score.png)
+
+### Notes on failed suggestions
+1. **"Enable compression"** - This is a server setting, not related to the source and build of the site. The demo is hosted on a simple shell account's hosting, which comes with several limitations (but costs nothing!). In a production environment, I would modify the .htaccess (apache) or nginx.conf (nginx) to enable Gzip compression, thus passing this test.
+2. **"Eliminate render-blocking JavaScript and CSS in above-the-fold content"** - this is flagged because the compiled css is placed in the <head> of the document, not at the end. following this recommendation would be difficult, as it flies in the face of most teams workflows, and causes the page to render unstyled before the stylesheet is loaded. Considering that the css accounts for only 5% of the total page size, this seems unnecessary. It should be noted that the JavaScript is following this recommendation.
+3. **"Leverage browser caching"** - Once again a server config issue that would be addressed in a real production environment.
